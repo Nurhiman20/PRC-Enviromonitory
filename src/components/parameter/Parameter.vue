@@ -31,6 +31,9 @@ export default {
     .card-sensor {
         margin: 30px;
         padding: 30px 25px 10px 25px;
+        h6{
+            font-weight: bold;
+        }
         i {
             font-size: 40px;
             margin: 5px;

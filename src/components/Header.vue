@@ -1,5 +1,8 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <ul class="nav navbar-nav mr-auto">
+            <li class="nav-item nav-link">{{ moment().format('MMMM Do YYYY, h:mm:ss a') }}</li>
+        </ul>
         <ul class="nav navbar-nav ml-auto">
             <li class="nav-item dropdown">
                 <a 
@@ -21,19 +24,12 @@
 </template>
 
 <script>
+var moment = require('moment');
+
 export default {
     data() {
         return {
-            time: ''
-        }
-    },
-    methods: {
-        currentDate() {
-            var today = new Date();
-            var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-            var dateTime = date+' '+time;
-
+            moment: moment
         }
     }
 }
