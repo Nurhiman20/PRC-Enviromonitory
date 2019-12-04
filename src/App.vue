@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fullwidth">
+  <div class="container-fluid">
     <div class="row">
       <app-sidebar></app-sidebar>
       <app-main></app-main>
@@ -21,6 +21,7 @@
 
 <style lang="scss">
   body {
+    margin: 0 auto;
     font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #fafafa;
   }

@@ -22,7 +22,7 @@
         width: 100%;
         margin-left: 225px;
         .view {
-            margin-left: 5%;
+            margin-left: 3%;
         }
     }
 </style>
