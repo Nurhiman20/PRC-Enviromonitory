@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="row">
-            <app-parameter v-for="parameter in parameters" :parameter="parameter"></app-parameter>
+            <app-parameter v-for="parameter in parameters" :parameter="parameter" v-bind:key="parameter"></app-parameter>
         </div>
     </div>
 </template>

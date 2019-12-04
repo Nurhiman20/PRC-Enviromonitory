@@ -6,16 +6,17 @@
         </div>
 
         <ul class="sidebar-nav nav navbar-nav mr-auto flex-column">
-            <router-link 
+            <a><router-link 
                         to="/" 
                         tag="li"
                         activeClass="active">
-                        <i class="fas fa-tachometer-alt"></i><a>Dashboard</a></router-link>
-            <router-link 
+                        <i class="fas fa-tachometer-alt"></i>Dashboard</router-link></a>
+            
+            <a><router-link 
                         to="/Table" 
                         tag="li"
                         activeClass="active">
-                        <i class="fas fa-columns"></i><a>Table</a></router-link>
+                        <i class="fas fa-columns"></i>Table</router-link></a>
         </ul>
     </div>
 </template>
@@ -35,19 +36,19 @@
             img {
                 position: absolute;
                 height: 30px;
-                margin: 2px 30px;
+                margin: 2px 25px;
             }
             h3 {            
                 font-family: Montserrat;
                 font-weight: bold;
                 font-size: 15px;
-                margin-left: 65px;
+                margin-left: 60px;
             }
         }
         .sidebar-nav {
             li {
                 list-style: none;
-                padding: 10px 40px;
+                padding: 10px 35px;
                 border-bottom: 1px solid #1C2431;
                 i {
                     margin-right: 10px;
