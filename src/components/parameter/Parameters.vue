@@ -15,9 +15,9 @@ export default {
     data() {
         return {
             parameters: [
-                { name: 'Suhu', unit: '°C', icon: 'fas fa-temperature-low', color: 'lightseagreen' },
-                { name: 'Kelembaban', unit: '%', icon: 'fas fa-tint', color: 'lightskyblue' },
-                { name: 'Intensitas Cahaya', unit: 'lux', icon: 'far fa-sun', color: 'gold' }
+                { name: 'Temperature', unit: '°C', icon: 'fas fa-temperature-low', color: 'lightseagreen' },
+                { name: 'Humidity', unit: '%', icon: 'fas fa-tint', color: 'lightskyblue' },
+                { name: 'Light Intensity', unit: 'lux', icon: 'far fa-sun', color: 'gold' }
             ],
             moment: moment
         }

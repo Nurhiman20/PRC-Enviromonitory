@@ -17,7 +17,7 @@ export default {
 
 var options = {
     title: {
-        text: 'Suhu Lingkungan',
+        text: 'Temperature Chart',
         x: -20 //center
     },
     subtitle: {
@@ -29,7 +29,7 @@ var options = {
     },
     yAxis: {
         title: {
-            text: 'Suhu (°C)'
+            text: 'Temperature (°C)'
         },
         plotLines: [{
             value: 0,
@@ -47,7 +47,7 @@ var options = {
     //     borderWidth: 0
     // },
     series: [{
-        name: 'Suhu',
+        name: 'Temperature',
         data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3]
     }]
 };
