@@ -13,7 +13,7 @@ export default {
         return {
             options: {
                         title: {
-                            text: this.chartData[0].title,
+                            text: this.chartData.title,
                             x: -20 //center
                         },
                         subtitle: {
@@ -25,7 +25,7 @@ export default {
                         },
                         yAxis: {
                             title: {
-                                text: this.chartData[0].yAxisTitle
+                                text: this.chartData.yAxisTitle
                             },
                             plotLines: [{
                                 value: 0,
@@ -34,7 +34,7 @@ export default {
                             }]
                         },
                         tooltip: {
-                            valueSuffix: this.chartData[0].valueSuffix
+                            valueSuffix: this.chartData.valueSuffix
                         },
                         // legend: {
                         //     layout: 'vertical',
@@ -44,7 +44,7 @@ export default {
                         // },
                         series: [{
                             name: 'Temperature',
-                            data: this.chartData[0].dataSensor
+                            data: this.chartData.dataSensor
                         }]
             }
         }
