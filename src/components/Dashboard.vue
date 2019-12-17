@@ -14,7 +14,6 @@
     export default {
         data() {
             return {
-                selectedParameter: 2,
                 parameters: [{ 
                         name: 'Temperature',
                         icon: 'fas fa-temperature-low', 
