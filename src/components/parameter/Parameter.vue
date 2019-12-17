@@ -7,7 +7,7 @@
                 </div>
                 <div class="col-md-7 parameter">
                     <h6>{{ parameter.name }}</h6>
-                    <p>27 {{ parameter.unit }}</p>
+                    <p>27 {{ parameter.valueSuffix }}</p>
                 </div>
             </div>                 
         </div>

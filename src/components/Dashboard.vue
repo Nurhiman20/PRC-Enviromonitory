@@ -1,8 +1,8 @@
 <template>
     <div class="container-fluid">
-        <app-parameter></app-parameter>
-        <app-dropdown></app-dropdown>
-        <app-chart :chartData="chartData"></app-chart>
+        <app-parameter :parameters="parameters"></app-parameter>
+        <app-dropdown @changeChart="selectedParameter = $event"></app-dropdown>
+        <app-chart :parameters="parameters" :selectedParameter="selectedParameter"></app-chart>
     </div>
 </template>
 
@@ -14,13 +14,33 @@
     export default {
         data() {
             return {
-                // chartData: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3]
-                chartData: { 
-                    title: 'Temperature Chart', 
-                    yAxisTitle: 'Temperature (°C)', 
-                    valueSuffix: '°C', 
-                    dataSensor: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3]
-                }
+                selectedParameter: 2,
+                parameters: [{ 
+                        name: 'Temperature',
+                        icon: 'fas fa-temperature-low', 
+                        color: 'lightseagreen',
+                        chartTitle: 'Temperature Chart', 
+                        yAxisTitle: 'Temperature (°C)', 
+                        valueSuffix: '°C', 
+                        dataSensor: [21.4, 24.5, 23.1, 26.4, 28.6, 29.4, 27.2, 26.5, 24.3, 22.3]
+                    }, {
+                        name: 'Humidity',
+                        icon: 'fas fa-tint', 
+                        color: 'lightskyblue',
+                        chartTitle: 'Humidity Chart', 
+                        yAxisTitle: 'Humidity (%)', 
+                        valueSuffix: '%', 
+                        dataSensor: [15.4, 13.9, 19.5, 20.5, 25.2, 21.5, 22.2, 20.5, 23.3, 18.3]
+                    }, {
+                        name: 'Light Intensity',
+                        unit: 'lux',
+                        icon: 'far fa-sun', 
+                        color: 'gold',
+                        chartTitle: 'Light Intensity Chart', 
+                        yAxisTitle: 'Light Intensity (lux)', 
+                        valueSuffix: 'lux', 
+                        dataSensor: [1200, 2300, 6034, 9034, 15490, 24233, 45500, 63400, 40553, 42300]
+                }]
             }
         },
         components: {

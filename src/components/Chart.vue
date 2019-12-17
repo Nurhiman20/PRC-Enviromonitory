@@ -7,13 +7,15 @@
 </template>
 
 <script>
+import { eventBus } from '../main'
+
 export default {
-    props: ['chartData'],
+    props: ['parameters'],
     data() {
         return {
             options: {
                         title: {
-                            text: this.chartData.title,
+                            text: this.parameters[0].chartTitle,
                             x: -20 //center
                         },
                         subtitle: {
@@ -25,7 +27,7 @@ export default {
                         },
                         yAxis: {
                             title: {
-                                text: this.chartData.yAxisTitle
+                                text: this.parameters[0].yAxisTitle
                             },
                             plotLines: [{
                                 value: 0,
@@ -34,7 +36,7 @@ export default {
                             }]
                         },
                         tooltip: {
-                            valueSuffix: this.chartData.valueSuffix
+                            valueSuffix: this.parameters[0].valueSuffix
                         },
                         // legend: {
                         //     layout: 'vertical',
@@ -43,11 +45,20 @@ export default {
                         //     borderWidth: 0
                         // },
                         series: [{
-                            name: 'Temperature',
-                            data: this.chartData.dataSensor
+                            name: this.parameters[0].name,
+                            data: this.parameters[0].dataSensor
                         }]
             }
         }
+    },
+    created() {
+        eventBus.$on('changeChart', (indexParameter) => {
+            this.options.title.text = this.parameters[indexParameter].chartTitle;
+            this.options.yAxis.title.text = this.parameters[indexParameter].yAxisTitle;
+            this.options.tooltip.valueSuffix = this.parameters[indexParameter].valueSuffix;
+            this.options.series[0].name = this.parameters[indexParameter].name;
+            this.options.series[0].data = this.parameters[indexParameter].dataSensor;
+        })
     }
 }
 

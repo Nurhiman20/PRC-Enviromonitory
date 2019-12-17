@@ -13,6 +13,8 @@ const router = new VueRouter({
   routes
 });
 
+export const eventBus = new Vue();
+
 new Vue({
   el: '#app',
   router,
